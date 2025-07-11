@@ -104,72 +104,76 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-background">
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+    <section id="projects" className="py-16 sm:py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               Featured Projects
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Real-world solutions that demonstrate expertise in AI, cybersecurity, and DevOps automation
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="bg-gradient-card p-6 border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-glow group">
-              <div className="mb-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className={`text-4xl p-3 rounded-lg bg-gradient-to-r ${project.gradient} bg-opacity-20`}>
+            <Card 
+              key={index} 
+              className="bg-gradient-card p-4 sm:p-6 border-border/50 hover:border-primary/50 transition-all duration-300 hover:shadow-glow hover:scale-105 group"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <div className="mb-4 sm:mb-6">
+                <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+                  <div className={`text-2xl sm:text-3xl lg:text-4xl p-2 sm:p-3 rounded-lg bg-gradient-to-r ${project.gradient} bg-opacity-20 animate-float`}>
                     {project.icon}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                    <h3 className="text-lg sm:text-xl font-bold text-foreground group-hover:text-primary transition-colors">
                       {project.title}
                     </h3>
                   </div>
                 </div>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
                   {project.description}
                 </p>
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 <div className="space-y-2">
                   {project.achievements.map((achievement, achIndex) => (
-                    <div key={achIndex} className="flex items-start gap-2 text-sm">
-                      <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                    <div key={achIndex} className="flex items-start gap-2 text-xs sm:text-sm">
+                      <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-primary mt-0.5 flex-shrink-0" />
                       <span className="text-muted-foreground">{achievement}</span>
                     </div>
                   ))}
                 </div>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {project.technologies.map((tech, techIndex) => (
-                    <Badge key={techIndex} variant="secondary" className="text-xs">
+                    <Badge key={techIndex} variant="secondary" className="text-xs hover:bg-primary/20 transition-colors">
                       {tech}
                     </Badge>
                   ))}
                 </div>
 
-                <div className="grid grid-cols-2 gap-4 pt-4 border-t border-border/50">
+                <div className="grid grid-cols-2 gap-3 sm:gap-4 pt-3 sm:pt-4 border-t border-border/50">
                   {Object.entries(project.metrics).map(([key, value]) => (
                     <div key={key} className="text-center">
-                      <div className="text-primary font-semibold">{value}</div>
+                      <div className="text-primary font-semibold text-sm sm:text-base">{value}</div>
                       <div className="text-xs text-muted-foreground capitalize">{key}</div>
                     </div>
                   ))}
                 </div>
 
-                <div className="flex gap-2 pt-4">
-                  <Button variant="outline" size="sm" className="flex-1">
-                    <Github className="h-4 w-4 mr-2" />
+                <div className="flex gap-2 pt-3 sm:pt-4">
+                  <Button variant="outline" size="sm" className="flex-1 text-xs sm:text-sm hover:bg-primary/10 hover:border-primary/30">
+                    <Github className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
                     Code
                   </Button>
-                  <Button variant="ghost" size="sm" className="flex-1">
-                    <ExternalLink className="h-4 w-4 mr-2" />
+                  <Button variant="ghost" size="sm" className="flex-1 text-xs sm:text-sm hover:bg-accent/10">
+                    <ExternalLink className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
                     Demo
                   </Button>
                 </div>
