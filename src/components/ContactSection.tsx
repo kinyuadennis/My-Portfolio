@@ -42,8 +42,8 @@ const ContactSection = () => {
     {
       icon: <Phone className="h-6 w-6" />,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567"
+      value: "+254111426110",
+      link: "tel:+254111426110"
     },
     {
       icon: <MapPin className="h-6 w-6" />,
