@@ -8,35 +8,50 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Professional DevOps Portfolio Color System */
+    --background: 218 23% 6%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 218 25% 10%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 218 25% 10%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 197 80% 65%;
+    --primary-foreground: 218 23% 6%;
+    --primary-glow: 197 90% 75%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 230 15% 15%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 230 15% 15%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 270 95% 75%;
+    --accent-foreground: 218 23% 6%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 230 15% 18%;
+    --input: 230 15% 18%;
+    --ring: 197 80% 65%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom Design Tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(197 80% 65%), hsl(270 95% 75%));
+    --gradient-card: linear-gradient(145deg, hsl(218 25% 10%), hsl(230 15% 15%));
+    --gradient-hero: linear-gradient(135deg, hsl(218 23% 6%), hsl(230 15% 10%));
+    --gradient-accent: linear-gradient(90deg, hsl(197 80% 65% / 0.1), hsl(270 95% 75% / 0.1));
+    
+    --shadow-elegant: 0 10px 30px -10px hsl(197 80% 65% / 0.2);
+    --shadow-glow: 0 0 40px hsl(197 80% 65% / 0.15);
+    --shadow-card: 0 8px 32px hsl(218 23% 6% / 0.4);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
